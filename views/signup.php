@@ -49,6 +49,13 @@
             <input type="password" class="form-control" id="senha" name="senha" placeholder="Confirme sua senha" required>
             <small class="text-warning" id="password-error"></small>
           </div>
+          <div class="form-group">
+            <label for="tipoConta" class="form-label mt-4">Tipo de Conta</label>
+            <select class="form-select" id="tipoConta" name="tipoConta">
+              <option id="clienteTipo" name="clienteTipo">Cliente</option>
+              <option id="motoristaTipo" name="motoristaTipo">Motorista</option>
+            </select>
+    </div>
           <button type="submit" id="addBtn" class="btn btn-primary btn-block">Registrar</button>
 
           <?php

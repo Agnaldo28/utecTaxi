@@ -1,0 +1,82 @@
+/*@import url(bootstrap.min.css);*/
+@import url(https://bootswatch.com/4/quartz/bootstrap.min.css);
+
+html{
+
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+}
+
+header{
+    font-size: 10px;
+    padding: 2rem 7%;
+    position: fixed;
+    top: -15px;
+    left: -70px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-image: linear-gradient(130deg, white 30%,rgb(57, 181, 219) -50%);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    z-index: 1000%;
+}
+/* justify-content: space-between; */
+header .logo img{
+    width: 14%;
+}
+
+
+nav a{
+    color: white;
+    font-size: 17px;
+    padding: 1rem;
+    margin-left: 1rem;
+    text-decoration: none;
+}
+
+#navbar{
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+#navbar:hover{
+    color: -primary;
+}
+
+.user{
+    padding: 1.5rem 30px;
+    color: white;
+    border: 1px solid white;
+    font-size: 12.5px;
+    transform: skew(-20deg);
+    position: relative;
+    background-color: black;
+    display: block;
+    left: 35px;
+    
+}
+
+.user a{
+    font-size: 11px;
+    color: white;
+    text-decoration: none;
+    outline: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

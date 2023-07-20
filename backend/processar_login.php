@@ -21,10 +21,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // Consulta o banco de dados para verificar as credenciais
     $query = "SELECT * FROM cliente WHERE email = '$email' AND senha = '$senha'";
     $resultado = $conexao->query($query);
+    
 
     if ($resultado->num_rows === 1) {
       // Usuário autenticado com sucesso
-      echo "Login realizado com sucesso!";
+      echo "Seja Bem Vindo ";
+      header("location: ../views/clientePage.php");
       // Aqui você pode redirecionar para a página do usuário logado, se desejar
     } else {
       // Credenciais inválidas
@@ -35,7 +37,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // Campos em branco
     echo "Email ou palavrapass errada!!";
   }
-  echo'<br>'.$email;
-  echo'<br>'.$senha;
+  
 }
 ?>
