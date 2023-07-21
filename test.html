@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calculadora de Distância Euclidiana</title>
+  <link rel="stylesheet" href="style/bootstrap.min.css">
+  <style>
+    button {
+padding: 10px 20px;
+font-size: 16px;
+cursor: pointer;
+}
+
+input[type="text"] {
+padding: 10px;
+font-size: 16px;
+}
+</style>
+</head>
+
+<body>
+  <div>
+    <button id="calcularBtn" onclick="calcularDistancia()">Calcular Distância</button>
+    <input type="text" id="distanciaInput" readonly style="display: none;">
+  </div>
+
+  <script>
+    function calcularDistanciaEuclidiana(x1, y1, x2, y2) {
+  const deltaX = x2 - x1;
+  const deltaY = y2 - y1;
+  const distanciaEuclidiana = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
+  return distanciaEuclidiana;
+}
+
+function calcularDistancia() {
+  const ponto1 = { x: 1, y: 2 };
+  const ponto2 = { x: 4, y: 6 };
+
+  const distancia = calcularDistanciaEuclidiana(ponto1.x, ponto1.y, ponto2.x, ponto2.y);
+
+  const calcularBtn = document.getElementById('calcularBtn');
+  const distanciaInput = document.getElementById('distanciaInput');
+
+  calcularBtn.style.display = 'none';
+  distanciaInput.style.display = 'inline';
+  distanciaInput.value = distancia;
+}
+
+
+  </script>
+</body>
+</html>
