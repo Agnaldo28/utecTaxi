@@ -1,51 +1,42 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Calculadora de Distância Euclidiana</title>
-  <link rel="stylesheet" href="style/bootstrap.min.css">
-  <style>
-    button {
-padding: 10px 20px;
-font-size: 16px;
-cursor: pointer;
-}
-
-input[type="text"] {
-padding: 10px;
-font-size: 16px;
-}
-</style>
+    <title>Soma de Números</title>
 </head>
-
 <body>
-  <div>
-    <button id="calcularBtn" onclick="calcularDistancia()">Calcular Distância</button>
-    <input type="text" id="distanciaInput" readonly style="display: none;">
-  </div>
+  <form id="calcForm">
+    <label for="num1">Número 1:</label>
+    <input type="number" id="num1" required>
+  
+    <label for="num2">Número 2:</label>
+    <input type="number" id="num2" required>
+  
+    <label for="result" id="resultLabel" hidden>Resultado:</label>
+    <input type="text" id="result" readonly hidden>
+  
+    <button type="button" onclick="calculateSum()">Calcular Soma</button>
+  </form>
+  
+  
 
   <script>
-    function calcularDistanciaEuclidiana(x1, y1, x2, y2) {
-  const deltaX = x2 - x1;
-  const deltaY = y2 - y1;
-  const distanciaEuclidiana = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
-  return distanciaEuclidiana;
-}
-
-function calcularDistancia() {
-  const ponto1 = { x: 1, y: 2 };
-  const ponto2 = { x: 4, y: 6 };
-
-  const distancia = calcularDistanciaEuclidiana(ponto1.x, ponto1.y, ponto2.x, ponto2.y);
-
-  const calcularBtn = document.getElementById('calcularBtn');
-  const distanciaInput = document.getElementById('distanciaInput');
-
-  calcularBtn.style.display = 'none';
-  distanciaInput.style.display = 'inline';
-  distanciaInput.value = distancia;
-}
-
-
+    function calculateSum() {
+      // Obtenha os valores dos campos de entrada
+      const num1 = parseFloat(document.getElementById('num1').value);
+      const num2 = parseFloat(document.getElementById('num2').value);
+  
+      // Calcule a soma dos números
+      const sum = num1 + num2;
+  
+      // Exiba o resultado no campo de resultado
+      const resultInput = document.getElementById('result');
+      resultInput.value = sum;
+  
+      // Mostre o campo de resultado e o rótulo associado
+      const resultLabel = document.getElementById('resultLabel');
+      resultInput.hidden = false;
+      resultLabel.hidden = false;
+    }
   </script>
 </body>
 </html>

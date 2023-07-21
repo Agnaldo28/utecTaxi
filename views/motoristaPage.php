@@ -80,19 +80,17 @@
                     ?> 
                 </tbody>
             </table> 
-            
-        
 
             <h4>Coordenadas de Cliente</h4>
                 <div style="max-width: 7rem;">
-                    <input type="number" class="form-control" id="clt_px" name="clt_px" placeholder="XX" width="2px" min="0" max="99">  -    
-                    <input type="number" class="form-control" id="clt_py" name="clt_py" placeholder="YY" min="0" max="99">
+                    <input type="number" class="form-control" id="clt_px" name="clt_px" placeholder="XX" width="2px" maxlength="3">  -    
+                    <input type="number" class="form-control" id="clt_py" name="clt_py" placeholder="YY" maxlength="3">
                 </div>
 
                 <h4 class="card-title">Coordenadas do Carro</h4>
                 <div style="max-width: 7rem;">
-                    <input type="number" class="form-control" id="car_dx" name="car_dx" placeholder="XX" width="5px" max="99" min="0">
-                    <input type="number" class="form-control" id="car_dy" name="car_dy" placeholder="YY" maxlength="2" max="99" min="0">
+                    <input type="number" class="form-control" id="clt_dx" name="clt_dx" placeholder="XX" width="5px" maxlength="2">
+                    <input type="number" class="form-control" id="clt_dy" name="clt_dy" placeholder="YY" maxlength="2">
                 </div>
                 <br>
 
@@ -106,39 +104,26 @@
 
                 <h4 class="card-title">Coordenadas do Destino</h4>
                 <div style="max-width: 7rem;">
-                    <input type="number" class="form-control" id="clt_dx" name="clt_dx" placeholder="XX" width="5px" max="99" min="0">
-                    <input type="number" class="form-control" id="clt_dy" name="clt_dy" placeholder="YY" max="99" min="0">
-                </div>
-                <h4 class="card-title">Preço por KM do Carro Escolhido</h4>
-                <div style="max-width: 7rem;">
-                    <input type="number" class="form-control" id="preco" name="preco" placeholder="XX" max="99" min="0">
+                    <input type="number" class="form-control" id="clt_dx" name="clt_dx" placeholder="XX" width="5px" maxlength="2">
+                    <input type="number" class="form-control" id="clt_dy" name="clt_dy" placeholder="YY" maxlength="2">
                 </div>
                 <br>
 
-                
+                <button id="calcularBtn" class="btn btn-info" onclick="calcularDistancia();">Calcular distância</button>
 
             <div>
                 <p>Distância da Viagem</p>
-                 <input type="text" id="result1" name="" readonly placeholder="KM"> 
-            </div>
-            <div>
-                <p>Tempo da Viagem</p>
-                 <input type="text" id="tempo" name="tempo">
-            </div>
-            <div>
-                <p>Valor a pagar</p>
-                 <input type="text" id="money" name="money">
-            </div>
-            <div>
-                <h4>Classificar Motorista</h4>
-                <input type="text" id="point" name="point">
+                 <input type="text" id="result" readonly placeholder="KM"> 
             </div>
 
-            <button id="calcularBtn" class="btn btn-info" onclick="calcular();">Calcular</button>
 
-            <button type="submit" class="btn btn-success">Solicitar</button>        
+
+
+            <button type="button" class="btn btn-success" onclick="calcularDistanciaEntreClienteEMotorista()">Solicitar</button>        
         </div>
 
+        
+     
         
     </section>
 
